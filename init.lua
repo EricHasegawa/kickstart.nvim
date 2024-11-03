@@ -388,6 +388,23 @@ require('lazy').setup({
         --   },
         -- },
         -- pickers = {}
+        defaults = {
+          vimgrep_arguments = {
+            'rg',
+            '--color=never',
+            '--no-heading',
+            '--with-filename',
+            '--line-number',
+            '--column',
+            '--smart-case',
+            '--ignore',
+            '--glob',
+            '!.git/*',
+            '--glob',
+            '!node_modules/*',
+          },
+          file_ignore_patterns = { 'node_modules' },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
